@@ -10,7 +10,9 @@ jdk:
 install:
     - sudo apt-get update
     - sudo apt-get install -y lib32stdc++6 lib32z1
-    - ./gradlew clean assemble --stacktrace
+    - ./gradlew clean
+    - android update sdk --no-ui
+    - ./gradlew assemble --stacktrace
 
 script:
     - ./gradlew check --stackrace
