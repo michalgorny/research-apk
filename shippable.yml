@@ -12,6 +12,8 @@ install:
     - sudo tar zxvf android-sdk_r23.0.2-linux.tgz -C .
     - export ANDROID_HOME=android-sdk-linux
     - export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
+    - pwd
+    - echo $PATH
     - android update sdk --no-ui
     - ./gradlew assemble --stacktrace
 
