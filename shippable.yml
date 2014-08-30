@@ -6,4 +6,4 @@ jdk:
 
 script:
 - chmod +x gradlew
-- ./gradlew build
+- ./gradlew tasks --all
