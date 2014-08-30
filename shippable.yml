@@ -1,7 +1,5 @@
 build_environment: Ubuntu 12.04
 
-reset_minion: true
-
 language: java
 
 jdk:
