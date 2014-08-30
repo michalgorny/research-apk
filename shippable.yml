@@ -6,4 +6,4 @@ jdk:
 
 script:
 - chmod +x gradlew
-- ./gradlew tasks --all
+- ./gradlew build --stacktrace
