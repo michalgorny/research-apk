@@ -10,10 +10,12 @@ install:
     - sudo apt-get install -y lib32stdc++6 lib32z1
     - wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
     - sudo tar zxvf android-sdk_r23.0.2-linux.tgz -C .
-    - export ANDROID_HOME=android-sdk-linux
+    - export ANDROID_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"android-sdk-linux
     - export PATH=$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH
     - pwd
     - echo $PATH
+    - ls -lha
+    - echo $ANDROID_HOME
     - android update sdk --no-ui
     - ./gradlew assemble --stacktrace
 
