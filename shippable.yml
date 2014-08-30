@@ -5,9 +5,10 @@ reset_minion: true
 language: java
 
 jdk:
- - oraclejdk7
+    - oraclejdk7
 
 install:
+    - sudo apt-get update
     - sudo apt-get install -y lib32stdc++6 lib32z1
     - ./gradlew clean assemble
 
