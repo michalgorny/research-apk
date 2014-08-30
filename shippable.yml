@@ -11,9 +11,9 @@ install:
     - wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
     - tar zxvf android-sdk_r23.0.2-linux.tgz -C .
     - export ANDROID_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/android-sdk-linux
-    - $ANDROID_HOME/tools/android update sdk --no-ui
+    - echo "y" | $ANDROID_HOME/tools/android update sdk --no-ui
     - ./gradlew assemble --stacktrace
-    - echo "sdk.dir=$ANDROID_HOME" > research-apk/local.properties
+    - echo "sdk.dir=$ANDROID_HOME" > local.properties
 
 script:
     - ./gradlew check --stackrace
