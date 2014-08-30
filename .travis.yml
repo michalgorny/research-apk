@@ -8,3 +8,4 @@ android:
 script:
   - chmod +x ./gradlew
   - ./gradlew build
+# dupa
