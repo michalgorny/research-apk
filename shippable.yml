@@ -7,7 +7,7 @@ jdk:
 
 install:
     - sudo apt-get update
-    - sudo apt-get install -y lib32stdc++6 lib32z1
+    - sudo apt-get install -y lib32stdc++6 lib32z1 expect
     - wget http://dl.google.com/android/android-sdk_r23.0.2-linux.tgz
     - tar zxvf android-sdk_r23.0.2-linux.tgz -C .
     - export ANDROID_HOME="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"/android-sdk-linux
