@@ -4,8 +4,9 @@ android:
   components:
     - build-tools-19.1.0
     - android-19
+    - extra
 
 script:
+  - adb shell 'pm list packages -f' | sed -e 's/.*=//' | sort
   - chmod +x ./gradlew
   - ./gradlew build --stacktrace
-# dupa
